@@ -12,3 +12,32 @@ export const loveMessages = [
   { text: "I adore your beauty", gif: beautyGif },
   { text: "Being with you feels like heaven", gif: beingGif },
 ];
+
+// src/utils/data.js
+
+export const milestones = [
+  {
+    date: "Jan 15, 2022",
+    title: "Our First Date",
+    description: "The day we first met and sparks flew ✨",
+    image: "/assets/images/first-date.jpg",
+  },
+  {
+    date: "Feb 14, 2022",
+    title: "First Valentine",
+    description: "Shared chocolates and endless smiles 💖",
+    image: "/assets/images/valentine.jpg",
+  },
+  {
+    date: "May 10, 2022",
+    title: "Weekend Trip",
+    description: "Our little adventure to the mountains 🏞️",
+    image: "/assets/images/trip.jpg",
+  },
+  {
+    date: "Dec 25, 2022",
+    title: "First Christmas Together",
+    description: "Festive moments and warm memories 🎄",
+    image: "/assets/images/christmas.jpg",
+  },
+];
