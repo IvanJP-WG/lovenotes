@@ -1,12 +1,13 @@
 // src/pages/Home.jsx
 import React from "react";
 import Hero from "../components/Hero";
+import LoveNotes from "../components/LoveNotes";
 
 const Home = () => {
   return (
     <div>
-      <Hero name="Emma" />
-      {/* Other sections go here */}
+      <Hero name="Love" />
+      <LoveNotes />
     </div>
   );
 };

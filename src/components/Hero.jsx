@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Player } from "@lottiefiles/react-lottie-player";
 import heartAnimation from "../assets/animations/heart.json"; // optional Lottie heart animation
 
-const Hero = ({ name = "[Her Name]" }) => {
+const Hero = ({ name = "[Love]" }) => {
   return (
     <section className="relative w-full h-screen flex flex-col justify-center items-center bg-gradient-to-b from-pink-200 via-pink-300 to-pink-400 overflow-hidden">
       
