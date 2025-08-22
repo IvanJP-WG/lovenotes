@@ -3,13 +3,6 @@ import { motion } from "framer-motion";
 
 const songs = [
   {
-    title: "Perfect",
-    artist: "Ed Sheeran",
-    preview: "/assets/audio/perfect-preview.mp3", // 30-sec clip
-    spotify: "https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v",
-    cover: "/assets/images/perfect.jpg",
-  },
-  {
     title: "Nothing",
     artist: "Bruno Major",
     preview: "/assets/audio/all-of-me-preview.mp3",
@@ -23,11 +16,24 @@ const songs = [
   },
 ];
 
-const Music = () => {
-  const [showFull, setShowFull] = useState({}); // track which song's full embed is shown
+const Music = ({ setBgVolume }) => {
+  const [showFull, setShowFull] = useState({});
 
   const toggleFull = (index) => {
-    setShowFull((prev) => ({ ...prev, [index]: !prev[index] }));
+    setShowFull((prev) => {
+      const newState = { ...prev, [index]: !prev[index] };
+
+      // Fade out background if showing Spotify, fade in if hiding
+      setTimeout(() => {
+      if (newState[index]) {
+        setBgVolume(0); // fade out
+      } else {
+        setBgVolume(0.3); // fade back in
+      }
+    }, 0);
+
+      return newState;
+    });
   };
 
   return (
