@@ -14,21 +14,19 @@ const Home = () => {
   useEffect(() => {
     const handleClick = () => {
       if (audioRef.current) {
-        audioRef.current.volume = 0.3;
-        audioRef.current.play();
+        audioRef.current.volume = 0.1;
+        audioRef.current.play().catch(err => console.log(err));
       }
       document.removeEventListener("click", handleClick);
     };
 
     document.addEventListener("click", handleClick);
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
+    return () => document.removeEventListener("click", handleClick);
   }, []);
 
   return (
     <div>
-      <audio ref={audioRef} loop src="/assets/audio/background.mp3" />
+      <audio ref={audioRef} loop src="/assets/music/love-song.mp3" />
       <Hero name="Love" />
       <LoveNotes />
       <Timeline />
