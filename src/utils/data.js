@@ -41,3 +41,35 @@ export const milestones = [
     image: "/assets/images/christmas.jpg",
   },
 ];
+
+// src/utils/data.js
+
+export const quizQuestions = [
+  {
+    question: "Where did we go on our first date?",
+    options: [
+      { text: "Cafe Delight", isCorrect: true },
+      { text: "Central Park", isCorrect: false },
+      { text: "Movie Theater", isCorrect: false },
+      { text: "Beach Walk", isCorrect: false },
+    ],
+  },
+  {
+    question: "What’s my favorite thing about you?",
+    options: [
+      { text: "Your laugh", isCorrect: true },
+      { text: "Your hair color", isCorrect: false },
+      { text: "Your favorite shoes", isCorrect: false },
+      { text: "Your handwriting", isCorrect: false },
+    ],
+  },
+  {
+    question: "Which trip did we enjoy the most?",
+    options: [
+      { text: "Mountain getaway", isCorrect: true },
+      { text: "City tour", isCorrect: false },
+      { text: "Beach vacation", isCorrect: false },
+      { text: "Amusement park", isCorrect: false },
+    ],
+  },
+];
